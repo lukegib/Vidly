@@ -6,7 +6,7 @@ const {User, validate} = require('../models/user');
 const bcrypt = require('bcryptjs');
 const jwt =require('jsonwebtoken');
 const config = require('config');
-const auth = require('../middleware/auth');//authorization NOT authentication
+const auth = require('../middleware/auth'); //authorization NOT authentication
 //joi password complexity
 
 router.get('/me', auth, async(req, res) => {
