@@ -70,7 +70,3 @@ router.get('/:id', async (req, res) => {
 
 
 module.exports = router;
-//Create new Rental
-//post api/rentals
-//get list of rentals
-//Get api/rentals
