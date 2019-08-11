@@ -37,7 +37,7 @@ router.get('/:id', async(req, res) => {
 
 router.put('/:id', async(req, res) => {
     let result = validate(req.body); 
-    if (result.error) return res.status(400).send("Invalid Input - Genre must be included"); 
+    if (result.error) return res.status(400).send("Invalid Input"); 
 
     const customer = await Customer.findByIdAndUpdate(req.params.id, {
         isGold: req.body.isGold, 
