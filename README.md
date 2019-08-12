@@ -19,15 +19,15 @@ As I have yet to implement a UI, Vidly is not the easiest to use. It requires th
 
 ### SET UP
 ##### Using hosted address
-Use the following address in POSTMAN - https://vidly-movie-database.herokuapp.com/api/ . This is the address we will use for the demo.
+Use the following address in Postman - https://vidly-movie-database.herokuapp.com/api/ . This is the address we will use for the demo.
 ##### Using local machine
 Navigate to the custom-environment-variables folder and enter your local MongoDB database address into the "database" field. Then go into the console and run 'npm start' from the project location.
 
 
 ### Creating a new user
-To create a new user we need to to first naviagte to https://vidly-movie-database.herokuapp.com/api/users. From here we can post a new user via raw JSON in the body.
+To create a new user we need to first navigate to https://vidly-movie-database.herokuapp.com/api/users. From here we can post a new user via raw JSON in the body.
 
-[postmanImage]()
+[Input location on Postman](demo_img/input_location.jpg)
 
 The user needs to have the following format:
 ```json
@@ -45,23 +45,23 @@ To login we need to navigate to the api/auth route. We enter the username and pa
 
 ```json
 {
-	"username": "willchange",
+	"email": "example@email.com",
 	"password": "password"
 }
 ```
 
 This will return an auth token which is needed for the next section. So for now we copy the token and paste it into the following location:
 
-[location here]()
+[x-auth-token location](demo_img/token_location.jpg)
 
 ### Viewing your profile
 Now that we have our x-auth-token we can navigate to the route /api/users/me to see the current logged in user.
 
 ### CRUD operations on movies/genres/customers/rentals etc.
-Now that we are all set up we can preform CRUD opertions on all the routes. Here are some examples...
+Now that we are all set up we can preform CRUD operations on all of the routes. Here are some examples...
 
 #### Posting a new genre
-Navingating to /api/genres and using the following model we can post a new genre.
+Navigating to /api/genres and using the following model we can post a new genre.
 ```json
 {
 	"genre": "genre name"
@@ -69,13 +69,13 @@ Navingating to /api/genres and using the following model we can post a new genre
 ```
 
 #### Getting all customers
-This is the simplist operation as it only requires going to /api/movies and calling the GET request
+This is the simplest operation as it only requires going to /api/movies and calling the GET request. The body will then show all the customer objects.
 
 #### Deleting a movie
 Using one of the movie ID's we recieved through the above operation we navigate to /api/movies/themovieIDhere. We then send the DELETE request to remove it from the database.
 
 #### Updating a customers information
-To update a customer information we grab their id and navigate to /api/customers/customersID and we send a PUT request with the updated information as raw JSON in the body. The JSON will be formatted the same as below...
+To update a customer information we grab their id and navigate to /api/customers/customersID and we send a PUT request with the updated information as raw JSON in the body. The JSON will be formatted like the following:
 ```json
 {
 	"isGold": true,
