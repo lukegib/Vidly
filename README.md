@@ -17,7 +17,7 @@ Vidly is a RESTful service (API) built using Node.js, Express.js, and MongoDB. I
 ## How to use Vidly
 As I have yet to implement a UI, Vidly is not the easiest to use. It requires the use of an application like Postman for Chrome. 
 
-#### creating a new user
+### Creating a new user
 To create a new user we need to to first naviagte to /api/users. From here we can post a new user via raw JSON in the body.
 
 The user needs to have the following format:
@@ -29,9 +29,9 @@ The user needs to have the following format:
 }
 ```
 
-Now you should see a success status and you're new users email and name!
+Now you should see a success status with your new users email and name!
 
-#### logging in
+### Logging in
 To login we need to navigate to the api/auth route. We enter the username and password via raw JSON in the body and post it.
 
 ```json
@@ -44,24 +44,26 @@ To login we need to navigate to the api/auth route. We enter the username and pa
 This will return an auth token which is needed for the next section. So for now we copy the token and paste it into the following location:
 
 
-#### viewing your profile
+### Viewing your profile
 Now that we have our x-auth-token we can navigate to the route /api/users/me to see the current logged in user.
 ####CRUD operations on movies/genres/customers/rentals etc.
 Now that we are all set up we can preform CRUD opertions on all the routes. Here are some examples...
-###### Posting a new genre
+
+### Posting a new genre
 Navingating to /api/genres and using the following model we can post a new genre.
 ```json
 {
 	"genre": "genre name"
 }
 ```
-###### Getting all customers
+
+### Getting all customers
 This is the simplist operation as it only requires going to /api/movies and calling the GET request
 
-###### Deleting a movie
+### Deleting a movie
 Using one of the movie ID's we recieved through the above operation we navigate to /api/movies/themovieIDhere. We then send the DELETE request to remove it from the database.
 
-######Updating a customers information
+### Updating a customers information
 To update a customer information we grab their id and navigate to /api/customers/customersID and we send a PUT request with the updated information as raw JSON in the body. The JSON will be formatted the same as below...
 ```json
 {
