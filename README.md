@@ -18,14 +18,16 @@ Vidly is a RESTful service (API) built using Node.js, Express.js, and MongoDB. I
 As I have yet to implement a UI, Vidly is not the easiest to use. It requires the use of an application like Postman for Chrome. 
 
 ### SET UP
-##### On hosted address
-Use the following address in POSTMAN - https://vidly-movie-database.herokuapp.com/api/
-##### On local machine
-Navigate to the custome-environment-variables folder and enter your local MongoDB database address into the "database" field. Then go into the console and run 'npm start'.
+##### Using hosted address
+Use the following address in POSTMAN - https://vidly-movie-database.herokuapp.com/api/ . This is the address we will use for the demo.
+##### Using local machine
+Navigate to the custom-environment-variables folder and enter your local MongoDB database address into the "database" field. Then go into the console and run 'npm start' from the project location.
 
 
 ### Creating a new user
-To create a new user we need to to first naviagte to /api/users. From here we can post a new user via raw JSON in the body.
+To create a new user we need to to first naviagte to https://vidly-movie-database.herokuapp.com/api/users. From here we can post a new user via raw JSON in the body.
+
+[postmanImage]()
 
 The user needs to have the following format:
 ```json
@@ -36,7 +38,7 @@ The user needs to have the following format:
 }
 ```
 
-Now you should see a success status with your new users email and name!
+Now you should see a success status with your new users email and name.
 
 ### Logging in
 To login we need to navigate to the api/auth route. We enter the username and password via raw JSON in the body and post it.
@@ -50,13 +52,15 @@ To login we need to navigate to the api/auth route. We enter the username and pa
 
 This will return an auth token which is needed for the next section. So for now we copy the token and paste it into the following location:
 
+[location here]()
 
 ### Viewing your profile
 Now that we have our x-auth-token we can navigate to the route /api/users/me to see the current logged in user.
-####CRUD operations on movies/genres/customers/rentals etc.
+
+### CRUD operations on movies/genres/customers/rentals etc.
 Now that we are all set up we can preform CRUD opertions on all the routes. Here are some examples...
 
-### Posting a new genre
+#### Posting a new genre
 Navingating to /api/genres and using the following model we can post a new genre.
 ```json
 {
@@ -64,13 +68,13 @@ Navingating to /api/genres and using the following model we can post a new genre
 }
 ```
 
-### Getting all customers
+#### Getting all customers
 This is the simplist operation as it only requires going to /api/movies and calling the GET request
 
-### Deleting a movie
+#### Deleting a movie
 Using one of the movie ID's we recieved through the above operation we navigate to /api/movies/themovieIDhere. We then send the DELETE request to remove it from the database.
 
-### Updating a customers information
+#### Updating a customers information
 To update a customer information we grab their id and navigate to /api/customers/customersID and we send a PUT request with the updated information as raw JSON in the body. The JSON will be formatted the same as below...
 ```json
 {
