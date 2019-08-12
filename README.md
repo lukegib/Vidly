@@ -27,7 +27,7 @@ Navigate to the custom-environment-variables folder and enter your local MongoDB
 ### Creating a new user
 To create a new user we need to first navigate to https://vidly-movie-database.herokuapp.com/api/users. From here we can post a new user via raw JSON in the body.
 
-[Input location on Postman](demo_img/input_location.jpg)
+[Input location on Postman](demo_img/input_location.png)
 
 The user needs to have the following format:
 ```json
@@ -52,7 +52,7 @@ To login we need to navigate to the api/auth route. We enter the email and passw
 
 This will return an auth token which is needed for the next section. So for now we copy the token and paste it into the following location:
 
-[x-auth-token location](demo_img/token_location.jpg)
+[x-auth-token location](demo_img/token_location.png)
 
 ### Viewing your profile
 Now that we have our x-auth-token we can navigate to the route /api/users/me to see the current logged in user.
