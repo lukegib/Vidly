@@ -1,5 +1,5 @@
 # Vidly
-Vidly is a RESTful service (API) built using Node.js, Express.js, and MongoDB. It mimicks a system used by a movie rental company. It was completed through the course "Node.js: The Complete Guide to Build RESTful APIs" by Mosh Hamedani.
+Vidly is a RESTful service (API) built using Node.js, Express.js, and MongoDB. It mimicks a system used by a movie rental company. It was completed through the course [Node.js: The Complete Guide to Build RESTful APIs](https://www.udemy.com/nodejs-master-class/ "Node.js: The Complete Guide to Build RESTful APIs") by Mosh Hamedani.
 
 ## What I learned
 - All about the Node Module System 
