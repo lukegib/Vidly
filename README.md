@@ -15,7 +15,7 @@ Vidly is a RESTful service (API) built using Node.js, Express.js, and MongoDB. I
 - Using heroku and MongoDB in the cloud.
 
 ## How to use Vidly
-As I have yet to implement a User Interface, Vidly is not the easiest to use. It requires the use of an application like Postman for Chrome. 
+As I have yet to implement a UI, Vidly is not the easiest to use. It requires the use of an application like Postman for Chrome. 
 
 #### creating a new user
 To create a new user we need to to first naviagte to /api/users. From here we can post a new user via raw JSON in the body.
