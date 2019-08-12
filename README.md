@@ -41,7 +41,7 @@ The user needs to have the following format:
 Now you should see a success status with your new users email and name.
 
 ### Logging in
-To login we need to navigate to the api/auth route. We enter the username and password via raw JSON in the body and post it.
+To login we need to navigate to the api/auth route. We enter the email and password via raw JSON in the body and post it.
 
 ```json
 {
